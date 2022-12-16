@@ -46,7 +46,7 @@ public class Background extends JComponent {
     private Component blur;
 
     public Background() {
-        image = new ImageIcon(getClass().getResource("/login/img.jpg"));
+        image = new ImageIcon(getClass().getResource("/login/img_2.jpg"));
     }
 
     private void createImage() {
@@ -82,7 +82,7 @@ public class Background extends JComponent {
             g2.setComposite(AlphaComposite.SrcIn);
             g2.drawImage(ImageUtil.blur(bufferedImage.getSubimage(x, y, width, height), 30f), 0, 0, null);
             g2.setComposite(AlphaComposite.SrcOver);
-            g2.setColor(new Color(255, 255, 255, 10));
+            g2.setColor(new Color(255, 255, 255, 20));
             g2.fill(shape);
             g2.dispose();
             g.drawImage(new ShadowRenderer(shadow, 0.3f, new Color(0, 0, 0)).createShadow(img), (int) (x - shadow * 0.8f), (int) (y - shadow * 0.8f), null);
